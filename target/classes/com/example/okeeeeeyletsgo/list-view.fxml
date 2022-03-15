@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <bottom>
+        <AnchorPane prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="btnAddNewHaircut" layoutX="338.0" layoutY="13.0" mnemonicParsing="false" onAction="#clickOnAddHaircut" text="Добавить новую прическу" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="99.0" />
+                <Button fx:id="btnOpenListOFHaircuts" layoutX="86.0" layoutY="13.0" mnemonicParsing="false" onAction="#clickOnListOfHaircuts" prefWidth="170.0" text="Открыть список причесок" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="86.0" />
+            </children>
+        </AnchorPane>
+    </bottom>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <ScrollPane hbarPolicy="NEVER" prefHeight="351.0" prefWidth="600.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="585.0">
+                            <children>
+                                <VBox fx:id="listOfHaircutsBox" prefHeight="350.0" prefWidth="586.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children></AnchorPane>
+                    </content>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
