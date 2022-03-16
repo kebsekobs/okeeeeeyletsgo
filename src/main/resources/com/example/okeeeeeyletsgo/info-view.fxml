@@ -16,6 +16,11 @@
     <center>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
+            <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../background.jpeg" />
+               </image>
+            </ImageView>
                 <Label fx:id="nameOfHaircutLabel" layoutX="14.0" layoutY="39.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="39.0" />
                 <Label fx:id="colourOfHaircutLabel" layoutX="336.0" layoutY="39.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="39.0" />
                 <Label fx:id="hairLengthLabel" layoutX="14.0" layoutY="95.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="95.0" />

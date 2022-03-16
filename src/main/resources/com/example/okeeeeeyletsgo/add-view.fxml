@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
@@ -14,7 +15,12 @@
     </bottom>
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
+          <children>
+              <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../../../background.jpeg" />
+                  </image>
+              </ImageView>
             <TextField fx:id="nameOfHaircutField" layoutX="14.0" layoutY="39.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="39.0" />
             <TextField fx:id="colourOfHaircutField" layoutX="336.0" layoutY="39.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="39.0" />
             <TextField fx:id="hairLengthField" layoutX="14.0" layoutY="95.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="95.0" />

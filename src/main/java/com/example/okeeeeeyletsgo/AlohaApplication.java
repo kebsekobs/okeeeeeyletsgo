@@ -3,9 +3,11 @@ package com.example.okeeeeeyletsgo;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.FileInputStream;
 
 public class AlohaApplication extends Application {
     @Override
@@ -14,6 +16,7 @@ public class AlohaApplication extends Application {
         MainController controller = new ListController();
         fxmlLoader.setController(controller);
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        stage.getIcons().add(new Image("C:\\Users\\User\\IdeaProjects\\okeeeeeyletsgo\\src\\main\\resources\\icon.jpg"));
         stage.setTitle("Aloha haircuts dance!(therealyou) Уя");
         stage.setScene(scene);
         stage.setResizable(false);

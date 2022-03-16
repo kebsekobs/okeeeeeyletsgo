@@ -6,6 +6,8 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
@@ -47,37 +49,13 @@ public class ListController extends MainController implements Initializable {
 
     public void createChildrenAnchorElement(AnchorPane haircut, int i) {
         Haircut currentHaircut = listOfHaircuts.get(i);
-        Label name_of_haircut = new Label("Name of Haircut");
-        name_of_haircut.minWidth(100);
-        name_of_haircut.minHeight(50);
-        AnchorPane.setBottomAnchor(name_of_haircut, 10.0);
-        AnchorPane.setLeftAnchor(name_of_haircut, 10.0);
-        AnchorPane.setRightAnchor(name_of_haircut, 300.0);
-        AnchorPane.setTopAnchor(name_of_haircut, 10.0);
-
-        Label current_name_of_haircut = new Label(currentHaircut.getNameOfHaircut());
-        current_name_of_haircut.minWidth(120);
-        current_name_of_haircut.minHeight(50);
-        AnchorPane.setBottomAnchor(current_name_of_haircut, 10.0);
-        AnchorPane.setLeftAnchor(current_name_of_haircut, 110.0);
-        AnchorPane.setRightAnchor(current_name_of_haircut, 300.0);
-        AnchorPane.setTopAnchor(current_name_of_haircut, 10.0);
-
-        /*Label name_of_colour = new Label("Colour");
-        name_of_haircut.minWidth(100);
-        name_of_haircut.minHeight(50);
-        AnchorPane.setBottomAnchor(name_of_colour, 10.0);
-        AnchorPane.setLeftAnchor(name_of_colour, 10.0);
-        AnchorPane.setRightAnchor(name_of_colour, 800.0);
-        AnchorPane.setTopAnchor(name_of_colour, 30.0);*/
-
-        /*Label current_name_of_colour = new Label(currentHaircut.getColourOfHaircut());
-        current_name_of_haircut.minWidth(120);
-        current_name_of_haircut.minHeight(50);
-        AnchorPane.setBottomAnchor(current_name_of_colour, 10.0);
-        AnchorPane.setLeftAnchor(current_name_of_colour, 110.0);
-        AnchorPane.setRightAnchor(current_name_of_colour, 600.0);
-        AnchorPane.setTopAnchor(current_name_of_colour, 30.0);*/
+        ImageView current_cute_photo = new ImageView(currentHaircut.getCutePhoto().substring(1, currentHaircut.getCutePhoto().length()-1));
+        current_cute_photo.setFitWidth(100);
+        current_cute_photo.setFitHeight(100);
+        AnchorPane.setBottomAnchor(current_cute_photo, 0.0);
+        AnchorPane.setLeftAnchor(current_cute_photo, 10.0);
+        AnchorPane.setRightAnchor(current_cute_photo, 250.0);
+        AnchorPane.setTopAnchor(current_cute_photo, 0.0);
 
         Button info = new Button("info");
         Button delete = new Button("delete");
@@ -99,7 +77,7 @@ public class ListController extends MainController implements Initializable {
         delete.setStyle("-fx-background-color: rgb(222,221,221); -fx-text-fill: #070707;");
         hBox.getChildren().addAll(info, delete);
 
-        haircut.getChildren().addAll(name_of_haircut, current_name_of_haircut, hBox);
+        haircut.getChildren().addAll(current_cute_photo, hBox);
 
         info.setOnAction(event -> {
             try {
@@ -113,11 +91,11 @@ public class ListController extends MainController implements Initializable {
 
     private void generateList(LinkedList<Haircut> list) {
         final int countOfHaircuts = list.size();
-        final int heightElement = 60;
+        final int heightElement = 110;
         listOfHaircutsBox.minHeight(heightElement * countOfHaircuts);
         for (int i = 0; i < countOfHaircuts; i++) {
             AnchorPane pane = new AnchorPane();
-            pane.setMinHeight(40);
+            pane.setMinHeight(110);
             pane.setMaxHeight(heightElement);
             pane.prefWidth(800);
             pane.prefHeight(heightElement);
