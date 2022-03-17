@@ -17,11 +17,11 @@
     <center>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
-                <ScrollPane fitToHeight="true" hbarPolicy="NEVER" prefHeight="350.0" prefWidth="600.0" vbarPolicy="ALWAYS">
+                <ScrollPane fx:id="scrollPanel" fitToHeight="true" hbarPolicy="NEVER" prefHeight="350.0" prefWidth="600.0" vbarPolicy="ALWAYS">
                     <content>
                         <AnchorPane prefHeight="400.0" prefWidth="585.0">
                             <children>
-                                <ImageView fitHeight="379.0" fitWidth="621.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="379.0" fitWidth="621.0" opacity="0.3" pickOnBounds="true" preserveRatio="true" visible="false">
                                     <image>
                                         <Image url="@../../../background.jpeg" />
                                     </image>

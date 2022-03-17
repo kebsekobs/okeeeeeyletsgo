@@ -16,7 +16,7 @@ public class AlohaApplication extends Application {
         MainController controller = new ListController();
         fxmlLoader.setController(controller);
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        stage.getIcons().add(new Image("C:\\Users\\User\\IdeaProjects\\okeeeeeyletsgo\\src\\main\\resources\\icon.jpg"));
+        stage.getIcons().add(new Image("C:\\okeeeeeyletsgo\\src\\main\\resources\\icon.jpg"));
         stage.setTitle("Aloha haircuts dance!(therealyou) Уя");
         stage.setScene(scene);
         stage.setResizable(false);
