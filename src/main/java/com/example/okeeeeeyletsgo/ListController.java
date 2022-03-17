@@ -21,6 +21,9 @@ public class ListController extends MainController implements Initializable {
     public Button btnAddNewHaircut;
 
     @FXML
+    public ScrollPane scrollPanel;
+
+    @FXML
     public Button btnOpenListOFHaircuts;
 
     @FXML
@@ -45,6 +48,7 @@ public class ListController extends MainController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resource) {
         generateList(listOfHaircuts);
+        listOfHaircutsBox.setStyle( "-fx-background-image: url('background.jpeg'); -fx-background-repeat: repeat; -fx-background-size: 590 350;");
     }
 
     public void createChildrenAnchorElement(AnchorPane haircut, int i) {
