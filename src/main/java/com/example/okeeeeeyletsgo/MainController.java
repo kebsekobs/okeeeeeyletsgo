@@ -3,6 +3,7 @@ package com.example.okeeeeeyletsgo;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
@@ -11,15 +12,18 @@ import javafx.stage.Stage;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 public class MainController{
     static LinkedList<Haircut> listOfHaircuts;
-    public static String pathCSV = "C:\\Users\\User\\IdeaProjects\\okeeeeeyletsgo\\src\\main\\resources\\data.csv";
+    static String localDir = System.getProperty("user.dir");
+    public static String pathCSV = localDir + "\\src\\main\\resources\\data.csv";
 
     @FXML
     public Button btnAddNewHaircut;
@@ -27,8 +31,6 @@ public class MainController{
     @FXML
     public Button btnOpenListOFHaircuts;
 
-    @FXML
-    public Button btnCutePhoto;
 
     public MainController() throws Exception  {
         listOfHaircuts = ParseCSV(pathCSV);
